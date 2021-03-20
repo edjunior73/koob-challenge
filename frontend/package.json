@@ -1,0 +1,57 @@
+{
+	"name": "koob-challenge-frontend",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"@material-ui/core": "^5.0.0-alpha.27",
+		"@material-ui/icons": "^5.0.0-alpha.27",
+		"@material-ui/lab": "^5.0.0-alpha.27",
+		"@material-ui/styled-engine-sc": "^5.0.0-alpha.25",
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react": "^11.1.0",
+		"@testing-library/user-event": "^12.1.10",
+		"@types/jest": "^26.0.15",
+		"@types/node": "^12.0.0",
+		"@types/react": "^16.9.53",
+		"@types/react-dom": "^16.9.8",
+		"history": "^5.0.0",
+		"react": "^16.14.0",
+		"react-dom": "^16.14.0",
+		"react-router": "^6.0.0-beta.0",
+		"react-router-dom": "^6.0.0-beta.0",
+		"react-scripts": "3.4.4",
+		"styled-components": "^5.2.1",
+		"typescript": "^4.0.3",
+		"web-vitals": "^0.2.4"
+	},
+	"scripts": {
+		"start": "react-app-rewired start",
+		"build": "react-app-rewired build",
+		"test": "react-app-rewired test",
+		"eject": "react-app-rewired eject"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@types/styled-components": "^5.1.7",
+		"babel-plugin-import": "^1.13.3",
+		"customize-cra": "^1.0.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^7.1.0",
+		"eslint-import-resolver-typescript": "^2.3.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-prettier": "^3.3.1",
+		"prettier": "^2.2.1",
+		"react-app-rewired": "^2.1.8"
+	}
+}
