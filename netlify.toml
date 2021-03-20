@@ -3,4 +3,4 @@
 
   publish = "build/"
 
-  command = "yarn build"
+  command = "yarn --cwd frontend build"
