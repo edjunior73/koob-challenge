@@ -6,6 +6,7 @@ import { axiosClient } from 'constants/axios'
 export interface BookState {
 	books: IBook[]
 	loading: boolean
+	openDrawer: boolean
 }
 
 export interface BookEvents {
@@ -14,17 +15,23 @@ export interface BookEvents {
 	'books/set': IBook[]
 	'books/add': IBook
 	'loading/set': boolean
+	'openDrawer/set': boolean
 }
 
 export const booksModule: IStoreonModule = store => {
 	store.on('@init', () => {
 		store.dispatch('books/get')
 		return {
-			books: []
+			books: [],
+			loading: false,
+			openDrawer: true
 		}
 	})
 	store.on('loading/set', (_state, loading) => ({
 		loading
+	}))
+	store.on('openDrawer/set', (_state, openDrawer) => ({
+		openDrawer
 	}))
 	store.on('books/get', async () => {
 		store.dispatch('loading/set', true)
