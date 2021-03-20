@@ -1,12 +1,13 @@
-import { Controller, Get } from '@nestjs/common'
+import { Body, Controller, Get, Post } from '@nestjs/common'
 import { LibrariesService } from './libraries.service'
+import { Book } from './models/book.model'
 
 @Controller('libraries')
 export class LibrariesController {
 	constructor(private readonly librariesService: LibrariesService) {}
 
-	@Get()
-	getHello(): string {
-		return this.librariesService.getHello()
+	@Post()
+	createBook(@Body() bookInput: Book): Book {
+		return this.librariesService.createBook(bookInput)
 	}
 }
