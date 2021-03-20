@@ -121,6 +121,54 @@ export const materialTheme = createMuiTheme({
 				}
 			}
 		},
+		MuiTextField: {
+			defaultProps: {
+				fullWidth: true,
+				variant: 'standard'
+			}
+		},
+		MuiInput: {
+			defaultProps: {
+				disableUnderline: true
+			},
+			styleOverrides: {
+				root: {
+					borderRadius: 6,
+					border: '1px solid',
+					borderColor: theme.inputDisabledColor,
+					fontSize: pxToRem(15),
+					marginTop: '0 !important',
+					'&.Mui-disabled': {
+						border: 'none',
+						backgroundColor: theme.disabled,
+						color: theme.inputDisabledColor
+					},
+					'&.Mui-focused': {
+						borderColor: theme.primary
+					}
+				},
+				input: {
+					padding: '12px'
+				}
+			}
+		},
+		MuiInputLabel: {
+			defaultProps: {
+				shrink: true
+			},
+			styleOverrides: {
+				root: {
+					fontSize: pxToRem(15),
+					color: theme.text
+				},
+				shrink: {
+					marginBottom: 10,
+					position: 'initial',
+					transform: 'unset',
+					transformOrigin: 'unset'
+				}
+			}
+		},
 		MuiPaper: {
 			styleOverrides: {
 				elevation7: {
@@ -203,9 +251,39 @@ export const materialTheme = createMuiTheme({
 			}
 		},
 		MuiAutocomplete: {
+			defaultProps: {
+				autoHighlight: true,
+				handleHomeEndKeys: true
+			},
 			styleOverrides: {
-				paper: {
-					boxShadow: `${theme.elevation8} !important`
+				endAdornment: {
+					right: 10,
+					top: undefined
+				},
+				inputRoot: {
+					paddingLeft: 4,
+					paddingTop: 4,
+					'&.MuiInput-root': {
+						paddingBottom: 4,
+						'& .MuiInput-input': {
+							padding: '7px 8px'
+						},
+						'& .MuiInput-input:first-child': {
+							padding: '7px 8px'
+						}
+					},
+					// TODO: remove when launch version alpha 26
+					'& .MuiAutocomplete-clearIndicator': {
+						padding: 2,
+						marginRight: 2
+					},
+					'& .MuiAutocomplete-popupIndicator': {
+						padding: 2,
+						marginRight: -2
+					}
+				},
+				tag: {
+					margin: '3px !important'
 				}
 			}
 		}

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { theme } from './theme'
 
 export const pxToRem = (px: number): string => `${px / 16}rem`
 
@@ -41,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
 		text-decoration: none;
 		color: ${props => props.theme.link};
 	}
-	.popover-transition {
-		transition: all 281ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 187ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+	.MuiAutocomplete-paper {
+		box-shadow: ${theme.elevation8};
 	}
 `
