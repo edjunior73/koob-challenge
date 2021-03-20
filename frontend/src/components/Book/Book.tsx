@@ -6,7 +6,7 @@ import * as S from './Book.style'
 interface IBookProps extends Omit<IBook, 'id'> {}
 
 export const Book = ({ name, author, category, quantity, editor }: IBookProps) => (
-	<S.Container>
+	<S.Container noBooks={quantity === 0} elevation={7}>
 		<S.Content>
 			<Typography>{author}</Typography>
 			<S.Category label={category} />

@@ -3,7 +3,6 @@ import { DRAWER_WIDTH } from 'constants/config'
 import styled from 'styled-components'
 
 export const Container = styled(Drawer).attrs({
-	variant: 'persistent',
 	anchor: 'right',
 	PaperProps: {
 		elevation: 8

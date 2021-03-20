@@ -1,14 +1,23 @@
 import { Chip, Paper, Typography } from '@material-ui/core'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled(Paper).attrs({
-	elevation: 7
+interface ContainerProps {
+	noBooks: boolean
+}
+
+export const Container = styled(Paper).withConfig<ContainerProps>({
+	shouldForwardProp: prop => !['noBooks'].includes(prop)
 })`
 	width: 220px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 280px;
+	${props =>
+		props.noBooks &&
+		css`
+			opacity: 0.7;
+		`}
 	border-radius: 10px;
 	position: relative;
 	background-color: #f0e8d4;

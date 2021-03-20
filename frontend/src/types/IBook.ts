@@ -6,3 +6,5 @@ export interface IBook {
 	quantity: number
 	editor: string
 }
+
+export type BookCreation = Omit<IBook, 'id'>
