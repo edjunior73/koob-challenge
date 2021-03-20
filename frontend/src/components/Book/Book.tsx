@@ -1,14 +1,9 @@
 import { Typography } from '@material-ui/core'
 import React from 'react'
+import { IBook } from 'types/IBook'
 import * as S from './Book.style'
 
-interface IBookProps {
-	name: string
-	author: string
-	category: string
-	quantity: number
-	editor: string
-}
+interface IBookProps extends Omit<IBook, 'id'> {}
 
 export const Book = ({ name, author, category, quantity, editor }: IBookProps) => (
 	<S.Container>
