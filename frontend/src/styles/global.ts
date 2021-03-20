@@ -24,7 +24,6 @@ export const GlobalStyles = createGlobalStyle`
 	 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 		font-weight: 400;
 		line-height: 1.43;
-		overflow: hidden;
 	}
 	button {
 		font-family: "Roboto", "Helvetica", "Arial", sans-serif;
