@@ -10,4 +10,9 @@ export class LibrariesController {
 	createBook(@Body() bookInput: Book): Book {
 		return this.librariesService.createBook(bookInput)
 	}
+
+	@Get()
+	getBooks(): Book[] {
+		return this.librariesService.getBooks()
+	}
 }

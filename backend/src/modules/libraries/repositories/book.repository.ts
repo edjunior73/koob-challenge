@@ -8,4 +8,8 @@ export class BookRepository {
 	save(book: Book): void {
 		this.books.push(book)
 	}
+
+	getAll(): Book[] {
+		return this.books
+	}
 }

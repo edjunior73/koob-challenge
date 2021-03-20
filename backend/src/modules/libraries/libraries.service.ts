@@ -11,4 +11,8 @@ export class LibrariesService {
 		this.bookRepo.save(book)
 		return book
 	}
+
+	getBooks(): Book[] {
+		return this.bookRepo.getAll()
+	}
 }
