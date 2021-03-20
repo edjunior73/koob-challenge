@@ -1,5 +1,5 @@
 import { Exclude } from 'class-transformer'
-import { IsNumber, IsPositive, IsString, MaxLength } from 'class-validator'
+import { IsNumber, Min, IsString, MaxLength } from 'class-validator'
 import { v4 as generateUUID } from 'uuid'
 
 export class Book {
@@ -19,7 +19,7 @@ export class Book {
 	category: string
 
 	@IsNumber()
-	@IsPositive()
+	@Min(0)
 	quantity: number
 
 	@IsString()
