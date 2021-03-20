@@ -24,7 +24,7 @@ export const booksModule: IStoreonModule = store => {
 		return {
 			books: [],
 			loading: false,
-			openDrawer: true
+			openDrawer: false
 		}
 	})
 	store.on('loading/set', (_state, loading) => ({
